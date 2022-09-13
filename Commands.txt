@@ -1,0 +1,24 @@
+Windows:
+--------------
+python --version
+pip --version
+pip install virtualenv
+python -m virtualenv .envDev
+.envDev\Scripts\activate.bat
+set FLASK_APP=crudapp.py
+
+Linux:
+-------
+python3 -m venv venv
+source venv/bin/activate
+pip install --upgrade pip
+pip install -r requirements.txt
+export FLASK_APP=crudapp.py
+
+
+General
+-----------
+flask db init
+flask db migrate -m "entries table"
+flask db upgrade
+flask run
